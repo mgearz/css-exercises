@@ -3,19 +3,23 @@
   color: hsl(0, 100%, 50%);
 }
 
+/* "Moved down the rule order"
 .small-para {
   font-size: 14px;
 }
+*/
 
 .para {
   font-size: 22px;
 }
 
+/* "Replaced with #confirm-button"
 .confirm {
   background: green;
   color: white;
   font-weight: bold;
 } 
+*/
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -23,12 +27,31 @@
   font-size: 20px;
 }
 
+/* "Moved down the rule order"
 .child {
   color: red;
   font-size: 14px;
 }
+*/
 
 div.text {
   color: green;
   font-size: 22px;
+}
+
+/* "Moved to here for rule order" */
+.small-para {
+  font-size: 14px;
+}
+/* Added "confirm-button" ID selector */
+#confirm-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+/* "Added div selector to create a descendant combinator */
+div .child {
+  color: red;
+  font-size: 14px;
 }
