@@ -12,22 +12,19 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  /* Added flexbox properties */
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 8px;
 }
 
-.left {
-  display: flex;
-  justify-content: flex-start;
-  gap: 8px;
-}
+/* Created separate containers for left & right elements
+   and added flexbox properties */
 
-.right {
+.left, .right {
   display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+  align-items: center;
+  gap: 16px;
 }
 
 .profile-image {
@@ -61,6 +58,9 @@ a {
 
 ul {
   list-style-type: none;
+  /* Added flexbox properties and spacing */
   display: flex;
   gap: 16px;
+  padding: 0;
+  margin: 0;
 }
