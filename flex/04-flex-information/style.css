@@ -1,8 +1,11 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  /* removed my code -
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  */
 }
 
 img {
@@ -13,24 +16,32 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
+  /* removed my code -
   width: 1000px;
   display: flex;
   justify-content: center;
   margin: 32px;
+  */
 }
 
 .plants {
   display: flex;
-  justify-content: space-between;
+  /* Changed to center: */
+  justify-content: center;
   gap: 52px;
 }
 
+/* Code have done with single ID, but this has same effect */
 .p1, .p2, .p3, .p4 {
+  max-width: 200px;
+  /* Removed my code -
   display: flex;
   width: 200px;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  */
 }
 
 /* do not edit this footer */
