@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+/* Added flexbox properties */
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,9 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+/* Added space/style to buttons */  
+  padding: 8px 16px;
+  font-weight: 700;
 }
 
 input {
@@ -24,4 +30,52 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+/* Added flex properties for the main body content */
+.content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Added style/positioning/flex properties for header/footer */
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 52px;
+}
+
+.header { 
+  top: 0;
+  background-color: transparent;
+  padding: 8px;
+}
+
+.footer {
+  bottom: 0;
+  background: #eeeeee;
+}
+
+/* Add style and flex properties to the lists */
+ul {
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 16px;
+  gap: 16px;
+}
+
+/* Added style to the links */
+a:link {
+  text-decoration: none;
+  color: #808080;
 }
