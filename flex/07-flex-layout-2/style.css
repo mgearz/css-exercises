@@ -2,27 +2,79 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+/* Added flexbox properties */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+/* Adjusted font style, added flexbox properties, and padding */
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+/* Added flexbox properties */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Added a Main section to target the cards */
+main {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 32px;
+  /* border: 4px solid red; */
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
+/* Added flexbox property */
+  display: flex;
+  /* border: 4px solid green; */
+}
+
+/* Created a div class to group the main content */
+.content {
+  display: flex;
+  flex: 1;
+  margin: 0;
+  /* border: 4px solid yellow; */
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+/* Added width and padding to size the cards */
+  width: 300px;
+  padding: 16px;
+}
+
+/* Targeted the links to style */
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Removed bullet points and added padding */
+ul {
+  list-style: none;
+  padding-left: 16px;
 }
