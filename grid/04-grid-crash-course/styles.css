@@ -1,0 +1,245 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ------ Lesson Pt. 1: Concepts ------ */
+/*
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 960px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */ /*
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* column-gap: 10px;
+    row-gap: 10px; */ /*
+    gap: 10px; /* Sets both column-gap & row-gap */
+    /* grid-auto-rows: minmax(200px, auto); */
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* align-items: end; */ /*
+}
+
+.item {
+    background: steelblue;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    border: skyblue 1px solid;
+}
+
+/* .item:nth-of-type(2) {
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    justify-self: center;
+} */
+
+/* .item:nth-of-type(1) {
+    background: #000;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */ /*
+    grid-column: 1 / 3; /* Sets both grid-column-start & grid-column-end */ /*
+}
+
+.item:nth-of-type(3) {
+    background: #333;
+    grid-row: 2 / 4;
+}
+
+.item:nth-of-type(4) {
+    background: #333;
+    grid-row: 2 / 4;
+} */ /*
+
+@media(max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+*/
+
+/* ------ Lesson Pt. 2: Grid Template Area ------ */
+/*
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px 1fr 70px;
+}
+
+header,
+footer,
+main,
+aside,
+nav {
+    background-color: steelblue;
+    color: #fff;
+    padding: 20px;
+    border: skyblue 1px solid;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+}
+*/
+
+/* ------ Lesson Pt. 3: Project (Testimonials Grid) ------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap');
+
+body {
+    background: #edf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.testimonials {
+    max-width: 1440px;
+    margin: 100px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    /* margin-bottom: 10px; */
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card__header h3 {
+    font-size: 15px;
+}
+
+.card__header p {
+    opacity: 50%;
+}
+
+.card__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Changes images to a circle */
+    border: 2px solid #996ed9;
+    margin-right: 10px;
+}
+
+.card__lead {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.card__quote {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 70%;
+}
+
+.card--bg-purple {
+    background: hsl(263, 55%, 52%);
+    color: #fff;
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat; /* Stops the quotation mark image from repeating */
+    background-position: top 10px right 50px; /* Positions quotation mark image */
+}
+
+.card--bg-gray-blue {
+    background: hsl(217, 19%, 35%);
+    color: #fff;
+}
+
+.card--bg-black-blue {
+    background: hsl(219, 29%, 14%);
+    color: #fff;
+}
+
+.card:nth-of-type(1) {
+    grid-column: 1 / 3;
+}
+
+.card:nth-of-type(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color:hsl(263, 55%, 52%);
+}
+
+/* Media Query to make it Responsive on Smaller Screens */
+@media(max-width: 768px) {
+    .testimonials {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    /* Need to reset spans for smaller screens */
+    .card:nth-of-type(1) {
+        grid-column: 1;
+    }
+    
+    .card:nth-of-type(4) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .card:nth-of-type(5) {
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
